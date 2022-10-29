@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+}
+
+:root {
+  --clr-bg: hsl(216, 12%, 8%);
+  --clr-dark: hsl(213, 19%, 18%);
+  --clr-medium: hsl(195, 4%, 22%);
+  --clr-light: hsl(217, 12%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-button: hsl(27, 82%, 51%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  background-color: var(--clr-bg);
+  color: var(--clr-light);
+}
+
+main {
+  width: 300px;
+  padding: 2em;
+
+  background-color: var(--clr-dark);
+  border-radius: 1rem;
+}
+
+.star {
+  display: inline;
+  background-color: var(--clr-medium);
+  padding: 1em 0.8em 0.5em;
+  border-radius: 90%;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  color: var(--clr-white);
+  margin: 0.5em 0;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+input[type="radio" i] {
+  display: none;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+
+  background-color: var(--clr-medium);
+  border-radius: 90%;
+}
+
+label:hover {
+  background-color: var(--clr-light);
+  color: var(--clr-white);
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--clr-button);
+  color: var(--clr-white);
+}
+
+button {
+  width: 100%;
+  background-color: var(--clr-button);
+  color: var(--clr-white);
+
+  border-radius: 2em;
+  padding: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+}
+
+button:hover,
+:focus {
+  background-color: var(--clr-white);
+  color: var(--clr-button);
+}
+
+.thank_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+header {
+  width: 200px;
+  background-color: var(--clr-medium);
+
+  color: var(--clr-button);
+
+  border-radius: 2em;
+  padding: 0.5em;
+
+  text-align: center;
+}
+
+h2 {
+  color: var(--clr-white);
+}
+
+.thank_container p {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 8px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
