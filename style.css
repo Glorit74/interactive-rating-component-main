@@ -53,27 +53,24 @@ main {
 }
 
 .star {
-  display: inline;
+  display: flex;
   background-color: var(--clr-medium);
-  padding: 1em 0.8em 0.5em;
+  width: 42px;
+  height: 42px;
+  padding: 1em;
   border-radius: 90%;
   margin-bottom: 1.5em;
 }
 
 h1 {
+  font-size: 2em;
   color: var(--clr-white);
-  margin: 1.2em 0 1em;
+  margin: 1em 0 0.5em;
 }
 
 p {
   margin-bottom: 1.25em;
   line-height: 1.5em;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .radio {
@@ -97,6 +94,7 @@ label {
 
   background-color: var(--clr-medium);
   border-radius: 90%;
+  cursor: pointer;
 }
 
 label:hover {

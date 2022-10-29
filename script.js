@@ -1,13 +1,12 @@
 const votingHTML = `
   <main class="container">
     <section class="rate_container">
-        <div class="star"><img src="/images/icon-star.svg" alt="star" /></div>
+        <span class="star"><img src="images/icon-star.svg" alt="star" /></span>
         <h1>How did we do?</h1>
         <p>
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-      
           <div class="radio">
             <input type="radio" name="rate" id="rate_1" value="1" />
             <label for="rate_1">1</label>
@@ -20,9 +19,7 @@ const votingHTML = `
             <input type="radio" name="rate" id="rate_5" value="5" />
             <label for="rate_5">5</label>
           </div>
-	
-         <button type="button" onclick="getVote()">Submit</button>
-      
+         <button onclick="getVote()">Submit</button> 
     </section>
 	</main>
   `;
@@ -33,7 +30,7 @@ const thankHTML = `
 	  <section class="thank_container">
         <div class="thank">
           <img
-            src="/images/illustration-thank-you.svg"
+            src="images/illustration-thank-you.svg"
             alt="Illustration thank you"
           />
         </div>
@@ -64,13 +61,11 @@ let vote;
 
 function getVote() {
   vote = document.querySelector('input[name="rate"]:checked').value;
-  console.log(vote);
   switchSection();
 }
 
 function switchSection() {
   let element = document.querySelector("main");
-  console.log(element);
   element.remove();
   document.getElementById("root").insertAdjacentHTML("afterbegin", thankHTML);
   document.getElementById("myRate").innerHTML = vote;
